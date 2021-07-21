@@ -1,14 +1,16 @@
-from flask import Flask, request
 
-app = Flask(__name__)
+from app import app
+# from flask import Flask, request
 
-@app.route('/post', methods=['POST'])
-def post_route():
-    if request.method == 'POST':
+# app = Flask(__name__)
 
-        data = request.get_json()
+# @app.route('/', methods=['POST'])
+# def post_route():
+#     if request.method == 'POST':
 
-        print('Data Received: "{data}"'.format(data=data))
-        return "Request Processed.\n"
+#         data = request.get_json()
 
-app.run()
+#         print('Data Received: "{data}"'.format(data=data))
+#         return "Request Processed.\n"
+
+# app.run()
