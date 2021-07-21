@@ -15,4 +15,20 @@ def post_route():
         print('Data Received: "{data}"'.format(data=data))
         return "Request Processed.\n"
 
-# app.run()
+app.run()
+
+# from flask import render_template
+# from app import app
+# from app.forms import LoginForm
+
+# # @app.route('/')
+# # @app.route('/index')
+# # def index():
+# #     return "Hello, World!"
+
+# @app.route('/login')
+# def login():
+#     form = LoginForm()
+#     #form = form line passes form object (right) to the template (left)
+#     return render_template('templates/login.html', title='Sign In', form=form)
+
