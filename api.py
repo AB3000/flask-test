@@ -1,11 +1,14 @@
-import flask
+from flask import Flask, request
 
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+app = Flask(__name__)
 
+@app.route('/post', methods=['POST'])
+def post_route():
+    if request.method == 'POST':
 
-@app.route('/', methods=['GET'])
-def home():
-    return "<h1>Distant Reading Archive</h1><p>This site is a prototype API for distant reading of science fiction novels.</p>"
+        data = request.get_json()
+
+        print('Data Received: "{data}"'.format(data=data))
+        return "Request Processed.\n"
 
 app.run()
